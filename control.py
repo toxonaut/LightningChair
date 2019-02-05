@@ -50,7 +50,7 @@ def pay_countdown():
         
 def paid():
     pay_counter.visible = False
-    my_qr.image="paid1.jpg"
+    my_qr.image="paid.jpg"
     my_qr.visible=True
     pay_counter.after(2000,start_use)
         
@@ -75,7 +75,7 @@ app = App(bg="#13084c", title="Lightning Chair", width=500, height=500)
 welcome_message = Text(app, text="Pay to use", size=20, font="Times New Roman", color="blue")
 pay_counter =Text(app, text="1", size=10, font="Times New Roman", color="blue", visible=False )
 use_counter =Text(app, text="1", size=30, font="Times New Roman", color="blue", visible=False)
-my_qr = Picture(app, image="waiting.jpg", width=250,height=250, visible=False)
+my_qr = Picture(app, image="paid.jpg", width=250,height=250, visible=False)
 my_hashtext = Text(app, text="hash", size=10, font="Times New Roman", color="blue", visible=False)
 with open(os.path.expanduser('~/MyPython/lnd/admin.macaroon'), 'rb') as f:
     macaroon_bytes = f.read()
